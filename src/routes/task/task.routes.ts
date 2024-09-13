@@ -6,6 +6,9 @@ const taskRoutes = Router()
 
 taskRoutes.post('/', authMiddleware, TaskController.store)
 taskRoutes.get('/', authMiddleware, TaskController.index)
+/*taskRoutes.get('/', (req, res) => {
+    return res.json("Hello world!")
+  })*/
 taskRoutes.get('/:id', authMiddleware, TaskController.show)
 taskRoutes.delete('/:id', authMiddleware, TaskController.delete)
 taskRoutes.put('/:id', authMiddleware, TaskController.update)

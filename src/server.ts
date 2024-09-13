@@ -7,6 +7,7 @@ import cookieParser from 'cookie-parser'
 
 dotenv.config()
 const app = express()
+// se não tiver variável, usa a porta 3001
 const port = process.env.PORT || 3001
 
 app.use(cors(
@@ -23,3 +24,5 @@ app.listen(port, () => {
   console.log(`Servidor executando na porta ${port}`)
   console.log(`Banco de dados`, dataBase.isInitialized ? 'inicializado' : 'não inicializado')
 })
+
+console.log('Olá!')
